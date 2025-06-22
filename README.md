@@ -46,7 +46,7 @@ python3 cleanup.py
 
 ⚠️ Caution: Files will be permanently deleted. Double check before running.
 
-⸻
+
 
 3️⃣ share_images.py - Google Drive Share Automation
 
@@ -69,7 +69,7 @@ Run:
 python3 share_images.py
 
 
-⸻
+
 
 🔧 Global Setup Instructions
 	•	Python 3.x
@@ -89,7 +89,7 @@ google-auth-oauthlib
 google-auth-httplib2
 
 
-⸻
+
 
 ✅ Optional: Git Preparation before push
 	•	You can make a simple .gitignore file to ignore:
