@@ -1,102 +1,147 @@
-🖥️ Automation Scripts Collection
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automation Scripts Collection</title>
+</head>
+<body>
 
-This repository contains 3 small Python utilities that automate different tasks:
+<h1>🖥️ Automation Scripts Collection</h1>
 
-1️⃣ auto_git_push.py - Automatic Git Commit and Push
+<p>This repository contains 3 small Python utilities that automate different tasks:</p>
 
-Description:
-	•	Continuously monitors a directory (githarkat) for file changes.
-	•	After detecting 50 file changes, it automatically:
-	•	Stages all changes
-	•	Commits with message: “Automatic commit”
-	•	Pushes to GitHub
+<hr>
 
-Requirements:
-	•	Install dependencies:
+<h2>1️⃣ <code>auto_git_push.py</code> - Automatic Git Commit and Push</h2>
 
-pip install gitpython watchdog
+<h3>Description:</h3>
+<ul>
+  <li>Continuously monitors a directory (<strong>githarkat</strong>) for file changes.</li>
+  <li>After detecting 50 file changes, it automatically:
+    <ul>
+      <li>Stages all changes</li>
+      <li>Commits with message: <code>Automatic commit</code></li>
+      <li>Pushes to GitHub</li>
+    </ul>
+  </li>
+</ul>
 
-	•	Make sure your repo path inside the script is correctly set:
+<h3>Requirements:</h3>
+<ul>
+  <li>Install dependencies:</li>
+</ul>
 
-repo_path = '/home/himanshu1009/Desktop/everything_in_here/GITDEMO/githarkat'
+<pre><code>pip install gitpython watchdog
+</code></pre>
 
-	•	Make sure Git credentials are configured for your repo.
+<ul>
+  <li>Make sure your repo path inside the script is correctly set:</li>
+</ul>
 
-Run:
+<pre><code>repo_path = '/home/himanshu1009/Desktop/everything_in_here/GITDEMO/githarkat'
+</code></pre>
 
-python3 auto_git_push.py
+<ul>
+  <li>Make sure Git credentials are configured for your repo.</li>
+</ul>
 
+<h3>Run:</h3>
 
-⸻
+<pre><code>python3 auto_git_push.py
+</code></pre>
 
-2️⃣ cleanup.py - Cleanup Unwanted Files
+<hr>
 
-Description:
-	•	Compares files inside two folders:
-	•	~/Desktop/Temporary/Himanshu
-	•	~/Desktop/Temporary/TripImages
-	•	Deletes files from TripImages which do not exist (by filename) inside Himanshu.
+<h2>2️⃣ <code>cleanup.py</code> - Cleanup Unwanted Files</h2>
 
-Use case:
-Keep only filtered trip images based on a reference folder.
+<h3>Description:</h3>
+<ul>
+  <li>Compares files inside two folders:</li>
+  <ul>
+    <li><code>~/Desktop/Temporary/Himanshu</code></li>
+    <li><code>~/Desktop/Temporary/TripImages</code></li>
+  </ul>
+  <li>Deletes files from TripImages which do not exist (by filename) inside Himanshu.</li>
+</ul>
 
-Run:
+<h3>Use case:</h3>
+<p>Keep only filtered trip images based on a reference folder.</p>
 
-python3 cleanup.py
+<h3>Run:</h3>
 
-⚠️ Caution: Files will be permanently deleted. Double check before running.
+<pre><code>python3 cleanup.py
+</code></pre>
 
-⸻
+<p>⚠️ <strong>Caution:</strong> Files will be permanently deleted. Double check before running.</p>
 
-3️⃣ share_images.py - Google Drive Share Automation
+<hr>
 
-Description:
-	•	Uses Google Drive API to automatically share a file/folder with multiple email addresses.
+<h2>3️⃣ <code>share_images.py</code> - Google Drive Share Automation</h2>
 
-Requirements:
-	•	Google Service Account JSON key file.
-	•	Enable Google Drive API on Google Cloud Console.
-	•	Update:
+<h3>Description:</h3>
+<ul>
+  <li>Uses Google Drive API to automatically share a file/folder with multiple email addresses.</li>
+</ul>
 
-SERVICE_ACCOUNT_FILE = '/path/to/service_account_key.json'
+<h3>Requirements:</h3>
+<ul>
+  <li>Google Service Account JSON key file.</li>
+  <li>Enable Google Drive API on Google Cloud Console.</li>
+  <li>Update:</li>
+</ul>
 
-	•	Install dependencies:
+<pre><code>SERVICE_ACCOUNT_FILE = '/path/to/service_account_key.json'
+</code></pre>
 
-pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+<ul>
+  <li>Install dependencies:</li>
+</ul>
 
-Run:
+<pre><code>pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+</code></pre>
 
-python3 share_images.py
+<h3>Run:</h3>
 
+<pre><code>python3 share_images.py
+</code></pre>
 
-⸻
+<hr>
 
-🔧 Global Setup Instructions
-	•	Python 3.x
-	•	Use virtual environment (recommended):
+<h2>🔧 Global Setup Instructions</h2>
+<ul>
+  <li>Python 3.x</li>
+  <li>Use virtual environment (recommended):</li>
+</ul>
 
-python3 -m venv venv
+<pre><code>python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+</code></pre>
 
-You can create requirements.txt file like this:
+<h3>Create <code>requirements.txt</code> file with:</h3>
 
-gitpython
+<pre><code>gitpython
 watchdog
 google-api-python-client
 google-auth
 google-auth-oauthlib
 google-auth-httplib2
+</code></pre>
 
+<hr>
 
-⸻
+<h2>✅ Optional: Git Preparation before push</h2>
 
-✅ Optional: Git Preparation before push
-	•	You can make a simple .gitignore file to ignore:
+<ul>
+  <li>You can create a simple <code>.gitignore</code> file to ignore:</li>
+</ul>
 
-*.pyc
+<pre><code>*.pyc
 __pycache__/
 service_account_key.json
+</code></pre>
 
-	•	Never push your service_account_key.json file to GitHub.
+<p><strong>Note:</strong> Never push your <code>service_account_key.json</code> file to GitHub.</p>
 
+</body>
+</html>
