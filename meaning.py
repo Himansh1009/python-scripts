@@ -7,4 +7,5 @@ print('')
 #     print('Not Today!')
 
 # Ternary operator
-print('Right on!' if meaning > 10 else 'Not Today!')
+print('Right on!') if meaning > 10 else print('Not Today!')
+
