@@ -1,3 +1,4 @@
+import math 
 #string data type
 
 #literal alignment
@@ -64,3 +65,57 @@ print("")
 #build a menu
 title = "menu".upper()
 print(title.center(20, "="))
+print("Coffee".ljust(16,".")+"$1".rjust(4))
+print("Muffine".ljust(16,".")+"$2".rjust(4))
+print("Cheesecake".ljust(16,".")+"$3".rjust(4))
+
+print("")
+
+#string ingex values
+print(first[1])
+print(first[-1])
+print(first[1:])
+
+#some methods return boolean data
+print(first.startswith("D"))
+print(first.endswith("z"))
+
+#boolean data type
+myvalue = True
+x= bool(False)
+print(type(x)==bool)
+print(isinstance(myvalue,bool))
+
+
+#numeric data types
+#intger
+price= 100
+best_price = int(80)
+print(type(price))
+print(isinstance(best_price, bool))
+print(isinstance(best_price, int))
+
+#float type
+gpa = 3.28
+y = float(1.14)
+print(type(gpa))
+print(type(y))
+
+#complex type
+comp_value = 5 + 3j
+print(type(comp_value))
+print(comp_value.real)
+print(comp_value.imag)
+
+#built-in functions for numbers
+
+print(abs(gpa))
+print(abs(gpa * -1))
+
+print(round(gpa))
+
+print(round(gpa, 1))
+
+
+
+print(math.pi)
