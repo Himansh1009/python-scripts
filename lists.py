@@ -26,7 +26,7 @@ print(users)
 users += ['Jason']
 print(users)
 
-users.extend(['jemmu','Raghav'])
+users.extend(['eddie','Raghav'])
 print(users)
 
 #here we are adding anothers list to a list
@@ -61,3 +61,62 @@ print(users)
 data.clear()
 print(data)
 
+users[1:2] = ['dave']
+users.sort()
+print(users)
+
+
+users.sort(key=str.lower)
+print(users)
+
+nums = [4,42,78,1,5]
+nums.reverse()
+print(nums)
+# nums.sort()
+# print(nums)
+
+print("")
+
+# nums.sort(reverse=True)
+# nums.sort(reverse=True)
+# print(nums)
+# nums.sort(=True)
+
+print(sorted(nums, reverse=True))
+print(nums)
+
+numscopy = nums.copy()
+mynums = list(nums)
+mycopy = nums[:]
+print("")
+print(numscopy)
+print(mynums)
+print(mycopy)
+print(nums)
+
+print(type(nums))
+
+mylist = list([1,"Neil",True])
+
+print(mylist)
+
+#Tuples
+
+mytuple = tuple(("dave",42,True))
+anothertuple=(1,4,2,8,2,2)
+print(mytuple)
+print(type(mytuple))
+print((type)(anothertuple))
+
+newlist = list(mytuple)
+newlist.append('Neil')
+newtuple = tuple(newlist)
+print(newtuple)
+
+(one, *two, hey)= anothertuple
+print(anothertuple)
+print(one)
+print(two)
+print(hey)
+
+print(anothertuple.count(2))
