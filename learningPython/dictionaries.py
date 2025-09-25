@@ -125,3 +125,26 @@ print(nums)
 morenums = {5,6,7}
 nums.update(morenums) # we are passing numbers from more nums set to nums set
 print(nums)
+
+# you can use update with lists, tuples and dictionaries, too.
+
+# merge two sets to create a new set
+one = {1,2,3}
+two = {5,6,7}
+
+mynewset = one.union(two)
+print(mynewset)
+
+# keep only duplciates
+one = {1,2,3}
+two = {2,3,4}
+
+one.intersection_update(two)
+print(one)
+
+# keep everything except duplciates
+one = {1,2,3}
+two = {2,3,4}
+
+one.symmetric_difference_update(two)
+print(one)
